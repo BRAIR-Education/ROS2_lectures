@@ -126,7 +126,7 @@ if __name__ == '__main__':
 ## 6) Build
 ```bash
 cd ~/ros2_w
-colcon build build --packages-select py_pubsub
+colcon build --packages-select py_pubsub
 ```
 
 ## 7) Run
