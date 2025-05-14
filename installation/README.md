@@ -1,5 +1,10 @@
 # Installation & Setup
 
+## 0) Prerequisities
+- **Ubuntu**: 24.04.
+
+In case you have 22.04, you can follow the installation [guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html) of ROS2 Humble.
+
 ## 1) Install
 To install ROS2, we can simply follow this official [guide](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html).
 
