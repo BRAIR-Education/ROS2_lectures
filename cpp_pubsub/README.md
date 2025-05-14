@@ -58,6 +58,39 @@ int main(int argc, char * argv[])
   return 0;
 }
 ```
+To avoid `lambda_function`, we can also use this syntax:
+
+```cpp
+    MinimalCppPublisher() : Node("minimal_cpp_publisher"), count_(0)
+    {
+        publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
+ 
+        // Set up a timer to call the timerCallback function
+        timer_ = create_wall_timer(500ms,
+          std::bind(&MinimalCppPublisher::timerCallback, this));
+ 
+        RCLCPP_INFO(get_logger(), "Publishing at 2 Hz");
+    }
+ 
+    /**
+     * @brief Timer callback function.
+     *
+     * This method is called at a fixed interval.
+     * It publishes a string message
+     * containing "Hello World" followed by a sequence number.
+     *
+     *  @return void
+     */
+    void timerCallback()
+    {
+        // Create a new String message object.
+        auto message = std_msgs::msg::String();
+        message.data = "Hello World! " +  std::to_string(count_++);
+ 
+        // Publish the message
+        publisher_->publish(message);
+    }
+```
 
 ## 3) Create Subscriber Node
 Create `subscriber_lambda_function`:
