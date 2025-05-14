@@ -1,4 +1,4 @@
-# My First Package in ROS2
+# My First Package in ROS2 (Python)
 To start with ROS2, we're going to create our first ROS package from the official tutorial of [ROS Documentation](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html).
 
 ## 1) Create Package
