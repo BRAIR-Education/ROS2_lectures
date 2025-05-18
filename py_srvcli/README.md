@@ -20,7 +20,7 @@ Navigate in your package:
 ```bash
 cd py_srvcli/py_srvcli
 ```
-create a file named `service_member_function` and paste:
+create a file named `service_member_function.py` and paste:
 ```python
 from example_interfaces.srv import AddTwoInts
 
@@ -56,7 +56,7 @@ if __name__ == '__main__':
 ```
 
 ## 3) Create the Client Node
-In the same path (`~/ros2_ws/src/py_srvcli/py_srvcli`), create a file named `client_member_function` and paste:
+In the same path (`~/ros2_ws/src/py_srvcli/py_srvcli`), create a file named `client_member_function.py` and paste:
 ```python
 import sys
 
