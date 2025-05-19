@@ -228,3 +228,12 @@ As in the previous examplew, we can build with `colcon`:
 cd ~/ros2_ws
 colcon build
 ```
+
+and finally for `.yaml`:
+```bash
+ros2 launch py_pubsub pubsub_launch.yaml
+```
+or for `.py`:
+```bash
+ros2 launch py_pubsub pubsub_launch.py
+```
