@@ -170,3 +170,61 @@ Create a launch file (`pubsub_launch.xml`) copying the following code
 ```bash
 ros2 launch py_pubsub pubsub_launch.xml
 ```
+
+## 9) YAML and Python Files for Launch
+We can use also other type files, such as `.yaml` or `.py`. Let's explore them. Navigate in the `launch` dir and create two new files:
+- 1. `pubsub_launch.yaml`
+```yaml
+%YAML 1.2
+---
+# Equivalent of
+    # <node name="listener_node" pkg="py_pubsub" exec="listener" output="screen"/>
+
+launch:
+  - node:
+      pkg: "py_pubsub"
+      exec: "listener"
+      name: "listener_node"
+      output: "screen"
+
+# Equivalent of
+    # <node name="talker_node" pkg="py_pubsub" exec="talker" output="screen"/>
+  - node:
+      pkg: "py_pubsub"
+      exec: "talker"
+      name: "talker_node"
+      namespace: "turtlesim2"
+```
+
+- 2. `pubsub_launch.py`
+```python
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+
+def generate_launch_description():
+    return LaunchDescription([
+        # Equivalent of
+        # <node name="listener_node" pkg="py_pubsub" exec="listener" output="screen"/>
+        Node(
+            package='py_pubsub',
+            executable='listener',
+            name='listener_node',
+            output='screen'
+        ),
+        # Equivalent of
+        # <node name="talker_node" pkg="py_pubsub" exec="talker" output="screen"/>
+        Node(
+            package='py_pubsub',
+            executable='talker',
+            name='talker_node',
+            output='screen'
+        )
+    ])
+```
+
+As in the previous examplew, we can build with `colcon`:
+```bash
+cd ~/ros2_ws
+colcon build
+```

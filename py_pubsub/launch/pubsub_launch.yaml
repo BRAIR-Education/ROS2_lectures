@@ -1,0 +1,19 @@
+%YAML 1.2
+---
+# Equivalent of
+    # <node name="listener_node" pkg="py_pubsub" exec="listener" output="screen"/>
+
+launch:
+  - node:
+      pkg: "py_pubsub"
+      exec: "listener"
+      name: "listener_node"
+      output: "screen"
+
+# Equivalent of
+    # <node name="talker_node" pkg="py_pubsub" exec="talker" output="screen"/>
+  - node:
+      pkg: "py_pubsub"
+      exec: "talker"
+      name: "talker_node"
+      output: "screen"
