@@ -223,3 +223,6 @@ ros2 run plotjuggler plotjuggler
 rqt
 ```
 Navigate in the Topic plugins and press to Topic publisher. You can use easily the GUI to publish the `Twist` msg and command your Kinematic Unicycle.
+
+![RQT Topic Publisher Path](docs/rqt_publisher.png)
+![RQT Topic Publisher Path](docs/rqt_twist.png)
