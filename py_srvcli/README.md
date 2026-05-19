@@ -129,5 +129,6 @@ ros2 run py_srvcli service
 ```
 After that, open a new terminal and write:
 ```bash
-ros2 run py_srvcli client
+ros2 run py_srvcli client <num1> <num2>
 ```
+where `<num1>` and `<num2>` are the integers to be summed (e.g., 3 and 5).
