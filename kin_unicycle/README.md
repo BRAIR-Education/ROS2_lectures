@@ -269,11 +269,13 @@ Interestingly, the previous equation can be expanded, explicating the dependence
 
 Given the rotation matrix $R$ that transforms from local to global:
 
-$$R = \begin{bmatrix} \cos(\theta_k) & -\sin(\theta_k) \\ \sin(\theta_k) & \cos(\theta_k) \end{bmatrix}$$
+$$R = \begin{bmatrix} \cos(\theta_k) & -\sin(\theta_k) \\ 
+\sin(\theta_k) & \cos(\theta_k) \end{bmatrix}$$
 
 To report the global acceleration back into the local reference frame and add noise, we multiply by the transpose (or inverse) of the rotation matrix, $R^\top$:
 
-$$a_{\text{IMU}} = R^{\top} \begin{bmatrix} a_{x, k} \\ a_{y, k} \end{bmatrix} + \mathcal{N}(0, \sigma^{2}_{a})$$
+$$a_{\text{IMU}} = R^{\top} \begin{bmatrix} a_{x, k} \\ 
+a_{y, k} \end{bmatrix} + \mathcal{N}(0, \sigma^{2}_{a})$$
 
 ### 10.4) Implementation
 
