@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'unicycle = kin_unicycle.kinematic_model:main'
+            'unicycle = kin_unicycle.kinematic_model:main',
+            'imu_simulator = kin_unicycle.imu_simulator:main'
         ],
     },
 )
